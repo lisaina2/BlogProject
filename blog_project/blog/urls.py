@@ -1,0 +1,8 @@
+from django.contrib import admin
+from django.urls import path
+from .views import post_detail, post_list
+
+urlpatterns = [
+    path('', post_list),
+    path('post/<int:id>/', post_detail)
+]
